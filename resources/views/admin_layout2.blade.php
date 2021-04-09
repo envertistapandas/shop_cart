@@ -1,17 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- start: Meta -->
+	<meta charset="utf-8">
+	<title>Admin Dashboard</title>
+	<meta name="description" content="Bootstrap Metro Dashboard">
+	<meta name="author" content="Dennis Ji">
+	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	<link id="bootstrap-style" href="{{asset('backend/css/bootstrap.min.css')}}" rel="stylesheet">
+	<link href="{{asset('backend/css/bootstrap-responsive.min.css')}}" rel="stylesheet">
+	<link id="base-style" href="{{asset('backend/css/style.css')}}" rel="stylesheet">
+	<link id="base-style-responsive" href="{{asset('backend/css/style-responsive.css')}}" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+	
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<!-- end: Favicon -->
+	
+		
+</head>
 
-@extends('layouts.app')
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">Admin Dashboard</div>
-                <div class="card-body">
-                <body>
-					<!-- start: Header -->
-					<div class="container-fluid-full">
-					<div class="row-fluid">	
-					<!-- start: Main Menu -->
+<body>
+	
+	<!-- start: Header -->
+	
+		<div class="container-fluid-full">
+		<div class="row-fluid">
+				
+			<!-- start: Main Menu -->
 			<div id="sidebar-left" class="span2">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
@@ -78,23 +101,21 @@
 		<script src="{{asset('backend/js/counter.js')}}"></script>	
 		<script src="{{asset('backend/js/retina.js')}}"></script>
 		<script src="{{asset('backend/js/custom.js')}}"></script>
-		<!-- end: JavaScript-->
-	 	<!-- bootbox code -->
-    	<script type="text/javascript" src="{{asset('https://raw.githubusercontent.com/makeusabrew/bootbox/gh-pages/bootbox.js')}}"></script>
-    	<script>
-   			 $(document).on("click", ".remove", function(e) {
-       		 bootbox.confirm("Are you sure you want to delete?", function(result) {
-            	if(result){
+		<!---------------------Laravel Default----------------------->
+		
+		<!-------------------End laravel Default--------------------->
+	<!-- end: JavaScript-->
+	 <!-- bootbox code -->
+    <script type="text/javascript" src="{{asset('https://raw.githubusercontent.com/makeusabrew/bootbox/gh-pages/bootbox.js')}}"></script>
+    <script>
+    $(document).on("click", ".remove", function(e) {
+        bootbox.confirm("Are you sure you want to delete?", function(result) {
+            if(result){
               console.log('write code of remove item.');
-            	}
-        	}); 
-    		})	;
-		</script>
+            }
+        }); 
+    });
+</script>
 	
 </body>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+</html>
